@@ -1,0 +1,44 @@
+version: '3'
+
+networks:
+  bokanbefalinger:
+    driver: bridge
+
+volumes:
+  virtuoso_data: {}
+  redis_data: {}
+
+services:
+  bokanbefalinger_app:
+    container_name: bokanbefalinger_app
+    image: "TODO"
+    networks:
+      - bokanbefalinger
+
+  bokanbefalinger_api:
+    container_name: bokanbefalinger_api
+    image: "TODO"
+    networks:
+      - bokanbefalinger
+
+  redis:
+    container_name: redis
+    image: "redis:3.0.7-alpine"
+    networks:
+      - bokanbefalinger
+    volumes:
+      - "redis_data:/data"
+
+  cron:
+    container_name: cron
+    image: "TODO"
+    networks:
+      - bokanbefalinger
+
+  virtuoso:
+    container_name: virtuoso
+    image: "digibib/virtuoso:TODO"
+    networks:
+      - bokanbefalinger
+    volumes:
+      - "virtuoso_data:/virtuoso/var/lib/virtuoso/db"
