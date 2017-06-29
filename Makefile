@@ -1,18 +1,27 @@
-.PHONY: clear_graphs import
-clear_graphs:
-	sudo docker exec -it virtuoso bash -c 'echo -e "log_enable(3,1);\nSPARQL CLEAR GRAPH <http://data.deichman.no/reviews>;"'
-	sudo docker exec -it virtuoso bash -c 'echo -e "log_enable(3,1);\nSPARQL CLEAR GRAPH <http://data.deichman.no/sources>;"'
-	sudo docker exec -it virtuoso bash -c 'echo -e "log_enable(3,1);\nSPARQL CLEAR GRAPH <http://data.deichman.no/books>;"'
-	sudo docker exec -it virtuoso bash -c 'echo -e "log_enable(3,1);\nSPARQL CLEAR GRAPH <lsext>;"'
+.PHONY: clear_graphs copy_data import
 
+define clear_graph
+	sudo docker exec -it virtuoso bash -c 'echo -e "log_enable(2);\nSPARQL CLEAR GRAPH <$(1)>;checkpoint;"'
+endef
+
+define import_graph
+	$(TIMEIT) sudo docker exec -it virtuoso bash -c "cd /data && echo -e \"ld_dir('/data', '$(1)', '$(2)');\nrdf_loader_run();\ncheckpoint;\" | isql"
+endef
+
+TIMEIT=/usr/bin/time -f"\nimport graph took: %es"
+
+clear_graphs:
+	$(call clear_graph,http://data.deichman.no/reviews)
+	$(call clear_graph,http://data.deichman.no/sources)
+	$(call clear_graph,http://data.deichman.no/books)
+	$(call clear_graph,lsext)
+
+FILES=reviews.ttl.gz sources.ttl.gz books.ttl.gz ds.nt.gz
 copy_data:
-	sudo docker cp ./data/books.ttl.gz virtuoso:/data/
-	sudo docker cp ./data/ds.nt.gz virtuoso:/data/
-	sudo docker cp ./data/reviews.ttl.gz virtuoso:/data/
-	sudo docker cp ./data/sources.ttl.gz virtuoso:/data/
+	for file in $(FILES); do sudo docker cp ./data/$$file virtuoso:/data/; done
 
 import: copy_data clear_graphs
-	sudo docker exec -it virtuoso bash -c "cd /data && echo -e \"ld_dir('/data', 'reviews.ttl.gz', 'http://data.deichman.no/reviews');\nrdf_loader_run();\" | isql"
-	sudo docker exec -it virtuoso bash -c "cd /data && echo -e \"ld_dir('/data', 'books.ttl.gz', 'http://data.deichman.no/sources');\nrdf_loader_run();\" | isql"
-	sudo docker exec -it virtuoso bash -c "cd /data && echo -e \"ld_dir('/data', 'reviews.ttl.gz', 'http://data.deichman.no/books');\nrdf_loader_run();\" | isql"
-	sudo docker exec -it virtuoso bash -c "cd /data && echo -e \"ld_dir('/data', 'ds.nt.gz', 'lsext');\nrdf_loader_run();\" | isql"
+	$(call import_graph,reviews.ttl.gz,http://data.deichman.no/reviews)
+	$(call import_graph,sources.ttl.gz,http://data.deichman.no/sources)
+	$(call import_graph,books.ttl.gz,http://data.deichman.no/books)
+	$(call import_graph,ds.nt.gz,lsext)
