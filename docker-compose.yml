@@ -35,10 +35,25 @@ services:
     networks:
       - bokanbefalinger
 
+  virtuoso_setup:
+    container_name: virtuoso_setup
+    image: alpine
+    volumes:
+      - ./config:/config
+      - virtuoso_data:/data
+    command:
+      - "cp"
+      - "/config/virtuoso.ini"
+      - "/data/"
+
   virtuoso:
     container_name: virtuoso
-    image: "digibib/virtuoso:TODO"
+    image: "digibib/virtuoso:29c4f313cdcc7d5cd1e331906b0d77b9363679ef"
     networks:
       - bokanbefalinger
+    depends_on:
+      - virtuoso_setup
+    ports:
+      - "8890:8890" # TODO remove when production
     volumes:
-      - "virtuoso_data:/virtuoso/var/lib/virtuoso/db"
+      - "virtuoso_data:/data"
