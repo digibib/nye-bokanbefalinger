@@ -31,7 +31,8 @@ services:
 
   cron:
     container_name: cron
-    image: "TODO"
+    build:
+      context: cron
     networks:
       - bokanbefalinger
 
