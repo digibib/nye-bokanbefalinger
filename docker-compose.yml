@@ -64,3 +64,11 @@ services:
       - virtuoso_setup
     volumes:
       - "virtuoso_data:/data"
+
+  vindu:
+    container_name: vindu
+    image: digibib/virtuoso-vindu:ab2dfbffdd4263eaa82e75f7f6dc1b2cab48328a
+    networks:
+      - bokanbefalinger
+    ports:
+      - 7777:7777
