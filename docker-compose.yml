@@ -9,17 +9,25 @@ volumes:
   redis_data: {}
 
 services:
-  bokanbefalinger_app:
-    container_name: bokanbefalinger_app
-    image: "TODO"
+  app:
+    container_name: app
+    image: digibib/bokanbefalinger-app:e5135b71420db218d9d288a41f71596650fafc3d
+    ports:
+      - 8801:8801
     networks:
       - bokanbefalinger
+    environment:
+      GMAIL_ADR: sercet
+      GMAIL_PASS: secret
+      SECRET_SESSION_KEY: secret
 
-  bokanbefalinger_api:
-    container_name: bokanbefalinger_api
-    image: "TODO"
+  api:
+    container_name: api
+    image: digibib/bokanbefalinger-api:eda8240edc9943006c69041e54d4622c5536ce05
     networks:
       - bokanbefalinger
+    environment:
+      SECRET_SESSION_KEY: secret
 
   redis:
     container_name: redis
@@ -54,7 +62,5 @@ services:
       - bokanbefalinger
     depends_on:
       - virtuoso_setup
-    ports:
-      - "8890:8890" # TODO remove when production
     volumes:
       - "virtuoso_data:/data"
