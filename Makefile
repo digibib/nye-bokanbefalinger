@@ -1,11 +1,11 @@
 .PHONY: clear_graphs copy_data import update
 
 define clear_graph
-	sudo docker exec -it virtuoso bash -c "cd /data && echo -e \"log_enable(3,1);\nSPARQL DROP SILENT GRAPH <$(1)>;\ncheckpoint;\" | isql"
+	docker exec -i virtuoso bash -c "cd /data && echo -e \"log_enable(3,1);\nSPARQL DROP SILENT GRAPH <$(1)>;\ncheckpoint;\" | isql"
 endef
 
 define import_graph
-	sudo docker exec -it virtuoso bash -c "cd /data && echo -e \"DELETE FROM DB.DBA.load_list;\nld_dir('/data', '$(1)', '$(2)');\nrdf_loader_run();\ncheckpoint;\" | isql"
+	docker exec -i virtuoso bash -c "cd /data && echo -e \"DELETE FROM DB.DBA.load_list;\nld_dir('/data', '$(1)', '$(2)');\nrdf_loader_run();\ncheckpoint;\" | isql"
 endef
 
 clear_graphs:
@@ -16,7 +16,7 @@ clear_graphs:
 
 FILES=reviews.ttl.gz sources.ttl.gz books.ttl.gz ds.nt.gz
 copy_data:
-	for file in $(FILES); do sudo docker cp ./data/$$file virtuoso:/data/; done
+	for file in $(FILES); do docker cp ./data/$$file virtuoso:/data/; done
 
 import: copy_data clear_graphs
 	$(call import_graph,reviews.ttl.gz,http://data.deichman.no/reviews)
@@ -26,6 +26,6 @@ import: copy_data clear_graphs
 
 update:
 	wget -O data/ds.nt.gz http://static.deichman.no/fusekidump.nt.gz
-	sudo docker cp ./data/ds.nt.gz virtuoso:/data/
+	/usr/bin/docker cp ./data/ds.nt.gz virtuoso:/data/
 	$(call clear_graph,lsext)
 	$(call import_graph,ds.nt.gz,lsext)
