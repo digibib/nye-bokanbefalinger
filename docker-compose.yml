@@ -67,7 +67,7 @@ services:
 
   vindu:
     container_name: vindu
-    image: digibib/virtuoso-vindu:ab2dfbffdd4263eaa82e75f7f6dc1b2cab48328a
+    image: digibib/virtuoso-vindu:bbfe3be70aaab563dafacb044770dcae187b14a0
     networks:
       - bokanbefalinger
     ports:
