@@ -14,7 +14,7 @@ clear_graphs:
 	$(call clear_graph,http://data.deichman.no/books)
 	$(call clear_graph,lsext)
 
-FILES=reviews.ttl.gz sources.ttl.gz books.ttl.gz ds.nt.gz
+FILES=reviews.ttl.gz sources.ttl.gz books.ttl.gz ds.nt.gz resources.ttl
 copy_data:
 	for file in $(FILES); do docker cp ./data/$$file virtuoso:/data/; done
 
@@ -29,3 +29,4 @@ update:
 	/usr/bin/docker cp ./data/ds.nt.gz virtuoso:/data/
 	$(call clear_graph,lsext)
 	$(call import_graph,ds.nt.gz,lsext)
+	$(call import_graph,resources.ttl,lsext)

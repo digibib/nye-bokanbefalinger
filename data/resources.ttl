@@ -1,0 +1,1133 @@
+@prefix literaryForm: <http://data.deichman.no/literaryForm#> .
+@prefix duo: <http://data.deichman.no/utility#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix nationality: <http://data.deichman.no/nationality#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix language: <http://lexvo.org/id/iso639-3/> .
+@prefix lvont:  <http://lexvo.org/ontology#> .
+
+literaryForm:novel a duo:LiteraryForm ;
+  duo:code "r" ;
+  rdfs:label "Roman"@no .
+literaryForm:shortProse a duo:LiteraryForm ;
+  rdfs:label "Kortprosa"@no .
+literaryForm:shortStory a duo:LiteraryForm ;
+  duo:code "n" ;
+  rdfs:label "Noveller/fortellinger"@no .
+literaryForm:essay a duo:LiteraryForm ;
+  rdfs:label "Essay"@no .
+literaryForm:poetry a duo:LiteraryForm ;
+  duo:code "d" ;
+  rdfs:label "Dikt"@no .
+literaryForm:drama a duo:LiteraryForm ;
+  duo:code "s" ;
+  rdfs:label "Skuespill"@no .
+literaryForm:comicBook a duo:LiteraryForm ;
+  duo:code "t" ;
+  rdfs:label "Tegneserie"@no .
+literaryForm:anthology a duo:LiteraryForm ;
+  duo:code "a" ;
+  rdfs:label "Antologi"@no .
+literaryForm:textBook a duo:LiteraryForm ;
+  duo:code "l" ;
+  rdfs:label "Lærebok"@no .
+literaryForm:pointingBook a duo:LiteraryForm ;
+  duo:code "p" ;
+  rdfs:label "Pekebok"@no .
+literaryForm:pictureBook a duo:LiteraryForm ;
+  duo:code "b" ;
+  rdfs:label "Bildebok"@no .
+literaryForm:dictionary a duo:LiteraryForm ;
+  rdfs:label "Ordbok"@no .
+literaryForm:referenceWork a duo:LiteraryForm ;
+  rdfs:label "Oppslagsverk"@no .
+literaryForm:biography a duo:LiteraryForm ;
+  rdfs:label "Biografi"@no .
+literaryForm:featureFilm a duo:LiteraryForm ;
+  rdfs:label "Spillefilm"@no .
+literaryForm:animatedFilm a duo:LiteraryForm ;
+  rdfs:label "Animasjonsfilm"@no .
+literaryForm:televisionSeries a duo:LiteraryForm ;
+  rdfs:label "TV-serie"@no .
+literaryForm:shortFilm a duo:LiteraryForm ;
+  rdfs:label "Kortfilm"@no .
+literaryForm:exerciseBook a duo:LiteraryForm ;
+  rdfs:label "Oppgavebok"@no .
+nationality:aborig a duo:Nationality ;
+  rdfs:label  "Aboriginsk"@no .
+
+nationality:afg a duo:Nationality ;
+  rdfs:label  "Afghanistan"@no .
+
+nationality:afr a duo:Nationality ;
+  rdfs:label  "Afrikansk"@no .
+
+nationality:alb a duo:Nationality ;
+  rdfs:label  "Albania"@no .
+
+nationality:alg a duo:Nationality ;
+  rdfs:label  "Algerie"@no .
+
+nationality:am a duo:Nationality ;
+  rdfs:label  "USA"@no .
+
+nationality:andor a duo:Nationality ;
+  rdfs:label  "Andorra"@no .
+
+nationality:angol a duo:Nationality ;
+  rdfs:label  "Angola"@no .
+
+nationality:antig a duo:Nationality ;
+  rdfs:label  "Antigua-Barbuda"@no .
+
+nationality:arab a duo:Nationality ;
+  rdfs:label  "Arabisk"@no .
+
+nationality:argen a duo:Nationality ;
+  rdfs:label  "Argentina"@no .
+
+nationality:arm a duo:Nationality ;
+  rdfs:label  "Armenia"@no .
+
+nationality:aserb a duo:Nationality ;
+  rdfs:label  "Aserbajdsjan"@no .
+
+nationality:au a duo:Nationality ;
+  rdfs:label  "Australia"@no .
+
+nationality:babyl a duo:Nationality ;
+  rdfs:label  "Babylonsk"@no .
+
+nationality:baham a duo:Nationality ;
+  rdfs:label  "Bahamas"@no .
+
+nationality:bahr a duo:Nationality ;
+  rdfs:label  "Bahrain"@no .
+
+nationality:bangl a duo:Nationality ;
+  rdfs:label  "Bangladesh"@no .
+
+nationality:barb a duo:Nationality ;
+  rdfs:label  "Barbados"@no .
+
+nationality:belg a duo:Nationality ;
+  rdfs:label  "Belgia"@no .
+
+nationality:beliz a duo:Nationality ;
+  rdfs:label  "Belize"@no .
+
+nationality:benin a duo:Nationality ;
+  rdfs:label  "Benin"@no .
+
+nationality:bhut a duo:Nationality ;
+  rdfs:label  "Bhutan"@no .
+
+nationality:boliv a duo:Nationality ;
+  rdfs:label  "Bolivia"@no .
+
+nationality:bosn a duo:Nationality ;
+  rdfs:label  "Bosnia-Hercegovina"@no .
+
+nationality:botsw a duo:Nationality ;
+  rdfs:label  "Botswana"@no .
+
+nationality:bras a duo:Nationality ;
+  rdfs:label  "Brasil"@no .
+
+nationality:brun a duo:Nationality ;
+  rdfs:label  "Brunei"@no .
+
+nationality:bulg a duo:Nationality ;
+  rdfs:label  "Bulgaria"@no .
+
+nationality:burkin a duo:Nationality ;
+  rdfs:label  "Burkina Faso"@no .
+
+nationality:burm a duo:Nationality ;
+  rdfs:label  "Myanmar"@no .
+
+nationality:burund a duo:Nationality ;
+  rdfs:label  "Burundi"@no .
+
+nationality:chil a duo:Nationality ;
+  rdfs:label  "Chile"@no .
+
+nationality:colomb a duo:Nationality ;
+  rdfs:label  "Colombia"@no .
+
+nationality:costaric a duo:Nationality ;
+  rdfs:label  "Costa Rica"@no .
+
+nationality:cub a duo:Nationality ;
+  rdfs:label  "Cuba"@no .
+
+nationality:d a duo:Nationality ;
+  rdfs:label  "Danmark"@no .
+
+nationality:dominik a duo:Nationality ;
+  rdfs:label  "Dominikanske republikk"@no .
+
+nationality:ecuad a duo:Nationality ;
+  rdfs:label  "Ecuador"@no .
+
+nationality:egypt a duo:Nationality ;
+  rdfs:label  "Egypt"@no .
+
+nationality:emiratarab a duo:Nationality ;
+  rdfs:label  "Forente arabiske emirater"@no .
+
+nationality:eng a duo:Nationality ;
+  rdfs:label  "England"@no .
+
+nationality:eritr a duo:Nationality ;
+  rdfs:label  "Eritrea"@no .
+
+nationality:est a duo:Nationality ;
+  rdfs:label  "Estland"@no .
+
+nationality:etiop a duo:Nationality ;
+  rdfs:label  "Etiopia"@no .
+
+nationality:fi a duo:Nationality ;
+  rdfs:label  "Finland"@no .
+
+nationality:filip a duo:Nationality ;
+  rdfs:label  "Filippinene"@no .
+
+nationality:fr a duo:Nationality ;
+  rdfs:label  "Frankrike"@no .
+
+nationality:fær a duo:Nationality ;
+  rdfs:label  "Færøyene"@no .
+
+nationality:gabon a duo:Nationality ;
+  rdfs:label  "Gabon"@no .
+
+nationality:gamb a duo:Nationality ;
+  rdfs:label  "Gambia"@no .
+
+nationality:gas a duo:Nationality ;
+  rdfs:label  "Madagaskar"@no .
+
+nationality:georg a duo:Nationality ;
+  rdfs:label  "Georgia"@no .
+
+nationality:ghan a duo:Nationality ;
+  rdfs:label  "Ghana"@no .
+
+nationality:gr a duo:Nationality ;
+  rdfs:label  "Hellas"@no .
+
+nationality:grenad a duo:Nationality ;
+  rdfs:label  "Grenada"@no .
+
+nationality:grønl a duo:Nationality ;
+  rdfs:label  "Grønland"@no .
+
+nationality:guadel a duo:Nationality ;
+  rdfs:label  "Guadeloupe"@no .
+
+nationality:guatem a duo:Nationality ;
+  rdfs:label  "Guatemala"@no .
+
+nationality:guin a duo:Nationality ;
+  rdfs:label  "Guinea"@no .
+
+nationality:guineab a duo:Nationality ;
+  rdfs:label  "Guinea-Bissau"@no .
+
+nationality:guyan a duo:Nationality ;
+  rdfs:label  "Guyana"@no .
+
+nationality:hait a duo:Nationality ;
+  rdfs:label  "Haiti"@no .
+
+nationality:hond a duo:Nationality ;
+  rdfs:label  "Honduras"@no .
+
+nationality:hviter a duo:Nationality ;
+  rdfs:label  "Hviterussland"@no .
+
+nationality:ind a duo:Nationality ;
+  rdfs:label  "India"@no .
+
+nationality:indian a duo:Nationality ;
+  rdfs:label  "Indiansk"@no .
+
+nationality:indon a duo:Nationality ;
+  rdfs:label  "Indonesia"@no .
+
+nationality:inuit a duo:Nationality ;
+  rdfs:label  "Inuittisk"@no .
+
+nationality:ir a duo:Nationality ;
+  rdfs:label  "Irland"@no .
+
+nationality:irak a duo:Nationality ;
+  rdfs:label  "Irak"@no .
+
+nationality:iran a duo:Nationality ;
+  rdfs:label  "Iran"@no .
+
+nationality:isl a duo:Nationality ;
+  rdfs:label  "Island"@no .
+
+nationality:isr a duo:Nationality ;
+  rdfs:label  "Israel"@no .
+
+nationality:it a duo:Nationality ;
+  rdfs:label  "Italia"@no .
+
+nationality:ivor a duo:Nationality ;
+  rdfs:label  "Elfenbenskysten"@no .
+
+nationality:jam a duo:Nationality ;
+  rdfs:label  "Jamaica"@no .
+
+nationality:jap a duo:Nationality ;
+  rdfs:label  "Japan"@no .
+
+nationality:jord a duo:Nationality ;
+  rdfs:label  "Jordan"@no .
+
+nationality:jug a duo:Nationality ;
+  rdfs:label  "Jugoslavia"@no .
+
+nationality:kamb a duo:Nationality ;
+  rdfs:label  "Kambodsja"@no .
+
+nationality:kamer a duo:Nationality ;
+  rdfs:label  "Kamerun"@no .
+
+nationality:kan a duo:Nationality ;
+  rdfs:label  "Canada"@no .
+
+nationality:kappverd a duo:Nationality ;
+  rdfs:label  "Kapp Verde"@no .
+
+nationality:kas a duo:Nationality ;
+  rdfs:label  "Kasakhstan"@no .
+
+nationality:ken a duo:Nationality ;
+  rdfs:label  "Kenya"@no .
+
+nationality:kin a duo:Nationality ;
+  rdfs:label  "Kina"@no .
+
+nationality:kirg a duo:Nationality ;
+  rdfs:label  "Kirgisistan"@no .
+
+nationality:komor a duo:Nationality ;
+  rdfs:label  "Komorene"@no .
+
+nationality:kongol a duo:Nationality ;
+  rdfs:label  "Den demokratiske republikken Kongo"@no .
+
+nationality:kongolbraz a duo:Nationality ;
+  rdfs:label  "Republikken Kongo"@no .
+
+nationality:kor a duo:Nationality ;
+  rdfs:label  "Korea"@no .
+
+nationality:kosov a duo:Nationality ;
+  rdfs:label  "Kosovo"@no .
+
+nationality:kroat a duo:Nationality ;
+  rdfs:label  "Kroatia"@no .
+
+nationality:kurd a duo:Nationality ;
+  rdfs:label  "Kurdisk"@no .
+
+nationality:kuw a duo:Nationality ;
+  rdfs:label  "Kuwait"@no .
+
+nationality:kypr a duo:Nationality ;
+  rdfs:label  "Kypros"@no .
+
+nationality:lank a duo:Nationality ;
+  rdfs:label  "Sri Lanka"@no .
+
+nationality:laot a duo:Nationality ;
+  rdfs:label  "Laos"@no .
+
+nationality:latv a duo:Nationality ;
+  rdfs:label  "Latvia"@no .
+
+nationality:lesot a duo:Nationality ;
+  rdfs:label  "Lesotho"@no .
+
+nationality:liban a duo:Nationality ;
+  rdfs:label  "Libanon"@no .
+
+nationality:liber a duo:Nationality ;
+  rdfs:label  "Liberia"@no .
+
+nationality:liby a duo:Nationality ;
+  rdfs:label  "Libya"@no .
+
+nationality:liecht a duo:Nationality ;
+  rdfs:label  "Liechtenstein"@no .
+
+nationality:lit a duo:Nationality ;
+  rdfs:label  "Litauen"@no .
+
+nationality:lux a duo:Nationality ;
+  rdfs:label  "Luxembourg"@no .
+
+nationality:maked a duo:Nationality ;
+  rdfs:label  "Makedonia"@no .
+
+nationality:malaw a duo:Nationality ;
+  rdfs:label  "Malawi"@no .
+
+nationality:malay a duo:Nationality ;
+  rdfs:label  "Malaysia"@no .
+
+nationality:mali a duo:Nationality ;
+  rdfs:label  "Mali"@no .
+
+nationality:malt a duo:Nationality ;
+  rdfs:label  "Malta"@no .
+
+nationality:maori a duo:Nationality ;
+  rdfs:label  "Maori"@no .
+
+nationality:marok a duo:Nationality ;
+  rdfs:label  "Marokko"@no .
+
+nationality:martinik a duo:Nationality ;
+  rdfs:label  "Martinique"@no .
+
+nationality:mauret a duo:Nationality ;
+  rdfs:label  "Mauritania"@no .
+
+nationality:maurit a duo:Nationality ;
+  rdfs:label  "Mauritius"@no .
+
+nationality:mesop a duo:Nationality ;
+  rdfs:label  "Mesopotamisk"@no .
+
+nationality:mex a duo:Nationality ;
+  rdfs:label  "Mexico"@no .
+
+nationality:mold a duo:Nationality ;
+  rdfs:label  "Moldovia"@no .
+
+nationality:moneg a duo:Nationality ;
+  rdfs:label  "Monaco"@no .
+
+nationality:mong a duo:Nationality ;
+  rdfs:label  "Mongolia"@no .
+
+nationality:montenegr a duo:Nationality ;
+  rdfs:label  "Montenegro"@no .
+
+nationality:mosam a duo:Nationality ;
+  rdfs:label  "Mosambik"@no .
+
+nationality:n a duo:Nationality ;
+  rdfs:label  "Norge"@no .
+
+nationality:namib a duo:Nationality ;
+  rdfs:label  "Namibia"@no .
+
+nationality:ned a duo:Nationality ;
+  rdfs:label  "Nederland"@no .
+
+nationality:nep a duo:Nationality ;
+  rdfs:label  "Nepal"@no .
+
+nationality:newzeal a duo:Nationality ;
+  rdfs:label  "New Zealand"@no .
+
+nationality:nicarag a duo:Nationality ;
+  rdfs:label  "Nicaragua"@no .
+
+nationality:nig a duo:Nationality ;
+  rdfs:label  "Niger"@no .
+
+nationality:niger a duo:Nationality ;
+  rdfs:label  "Nigeria"@no .
+
+nationality:nordir a duo:Nationality ;
+  rdfs:label  "Nord-Irland"@no .
+
+nationality:nordkor a duo:Nationality ;
+  rdfs:label  "Nord-Korea"@no .
+
+nationality:om a duo:Nationality ;
+  rdfs:label  "Oman"@no .
+
+nationality:pak a duo:Nationality ;
+  rdfs:label  "Pakistan"@no .
+
+nationality:pal a duo:Nationality ;
+  rdfs:label  "Palestina"@no .
+
+nationality:panam a duo:Nationality ;
+  rdfs:label  "Panama"@no .
+
+nationality:pap a duo:Nationality ;
+  rdfs:label  "Papua Ny-Guinea"@no .
+
+nationality:parag a duo:Nationality ;
+  rdfs:label  "Paraguay"@no .
+
+nationality:pers a duo:Nationality ;
+  rdfs:label  "Persisk"@no .
+
+nationality:peru a duo:Nationality ;
+  rdfs:label  "Peru"@no .
+
+nationality:pol a duo:Nationality ;
+  rdfs:label  "Polen"@no .
+
+nationality:portug a duo:Nationality ;
+  rdfs:label  "Portugal"@no .
+
+nationality:puert a duo:Nationality ;
+  rdfs:label  "Puerto Rico"@no .
+
+nationality:qat a duo:Nationality ;
+  rdfs:label  "Qatar"@no .
+
+nationality:r a duo:Nationality ;
+  rdfs:label  "Russland"@no .
+
+nationality:rom a duo:Nationality ;
+  rdfs:label  "Romersk"@no .
+
+nationality:rum a duo:Nationality ;
+  rdfs:label  "Romania"@no .
+
+nationality:rwand a duo:Nationality ;
+  rdfs:label  "Rwanda"@no .
+
+nationality:salvad a duo:Nationality ;
+  rdfs:label  "El Salvador"@no .
+
+nationality:sam a duo:Nationality ;
+  rdfs:label  "Samisk"@no .
+
+nationality:samoan a duo:Nationality ;
+  rdfs:label  "Samoa"@no .
+
+nationality:sanktluc a duo:Nationality ;
+  rdfs:label  "Sankt Lucia"@no .
+
+nationality:saudiarab a duo:Nationality ;
+  rdfs:label  "Saudi-Arabia"@no .
+
+nationality:senegal a duo:Nationality ;
+  rdfs:label  "Senegal"@no .
+
+nationality:serb a duo:Nationality ;
+  rdfs:label  "Serbia"@no .
+
+nationality:sierral a duo:Nationality ;
+  rdfs:label  "Sierra Leone"@no .
+
+nationality:sk a duo:Nationality ;
+  rdfs:label  "Skottland"@no .
+
+nationality:slovak a duo:Nationality ;
+  rdfs:label  "Slovakia"@no .
+
+nationality:sloven a duo:Nationality ;
+  rdfs:label  "Slovenia"@no .
+
+nationality:somal a duo:Nationality ;
+  rdfs:label  "Somalia"@no .
+
+nationality:sp a duo:Nationality ;
+  rdfs:label  "Spania"@no .
+
+nationality:sudan a duo:Nationality ;
+  rdfs:label  "Sudan"@no .
+
+nationality:surin a duo:Nationality ;
+  rdfs:label  "Surinam"@no .
+
+nationality:sv a duo:Nationality ;
+  rdfs:label  "Sverige"@no .
+
+nationality:sveits a duo:Nationality ;
+  rdfs:label  "Sveits"@no .
+
+nationality:swazil a duo:Nationality ;
+  rdfs:label  "Swaziland"@no .
+
+nationality:syr a duo:Nationality ;
+  rdfs:label  "Syria"@no .
+
+nationality:sørafr a duo:Nationality ;
+  rdfs:label  "Sør-Afrika"@no .
+
+nationality:sørkor a duo:Nationality ;
+  rdfs:label  "Sør-Korea"@no .
+
+nationality:sørsudan a duo:Nationality ;
+  rdfs:label  "Sør-Sudan"@no .
+
+nationality:t a duo:Nationality ;
+  rdfs:label  "Tyskland"@no .
+
+nationality:tadsj a duo:Nationality ;
+  rdfs:label  "Tadsjikistan"@no .
+
+nationality:tahit a duo:Nationality ;
+  rdfs:label  "Tahiti"@no .
+
+nationality:taiw a duo:Nationality ;
+  rdfs:label  "Taiwan"@no .
+
+nationality:tanz a duo:Nationality ;
+  rdfs:label  "Tanzania"@no .
+
+nationality:tchad a duo:Nationality ;
+  rdfs:label  "Tchad"@no .
+
+nationality:thai a duo:Nationality ;
+  rdfs:label  "Thailand"@no .
+
+nationality:tib a duo:Nationality ;
+  rdfs:label  "Tibet"@no .
+
+nationality:togo a duo:Nationality ;
+  rdfs:label  "Togo"@no .
+
+nationality:trinid a duo:Nationality ;
+  rdfs:label  "Trinid og Tobago"@no .
+
+nationality:tsj a duo:Nationality ;
+  rdfs:label  "Tsjekkia"@no .
+
+nationality:tsjet a duo:Nationality ;
+  rdfs:label  "Tsjetsjenia"@no .
+
+nationality:tun a duo:Nationality ;
+  rdfs:label  "Tunisia"@no .
+
+nationality:turkm a duo:Nationality ;
+  rdfs:label  "Turkmenistan"@no .
+
+nationality:tyrk a duo:Nationality ;
+  rdfs:label  "Tyrkia"@no .
+
+nationality:ugand a duo:Nationality ;
+  rdfs:label  "Uganda"@no .
+
+nationality:ukr a duo:Nationality ;
+  rdfs:label  "Ukraina"@no .
+
+nationality:ung a duo:Nationality ;
+  rdfs:label  "Ungarn"@no .
+
+nationality:urug a duo:Nationality ;
+  rdfs:label  "Uruguay"@no .
+
+nationality:usb a duo:Nationality ;
+  rdfs:label  "Usbekistan"@no .
+
+nationality:venez a duo:Nationality ;
+  rdfs:label  "Venezuela"@no .
+
+nationality:viet a duo:Nationality ;
+  rdfs:label  "Vietnam"@no .
+
+nationality:wal a duo:Nationality ;
+  rdfs:label  "Wales"@no .
+
+nationality:yemen a duo:Nationality ;
+  rdfs:label  "Jemen"@no .
+
+nationality:zair a duo:Nationality ;
+  rdfs:label  "Zaïre"@no .
+
+nationality:zamb a duo:Nationality ;
+  rdfs:label  "Zambia"@no .
+
+nationality:zimb a duo:Nationality ;
+  rdfs:label  "Zimbabwe"@no .
+
+nationality:øst a duo:Nationality ;
+  rdfs:label  "Østerrike"@no .
+
+nationality:storbr a duo:Nationality ;
+  rdfs:label  "Storbritannia"@no .
+
+nationality:cshh a duo:Nationality ;
+  rdfs:label  "Tsjekkoslovakia"@no .
+
+nationality:yucs a duo:Nationality ;
+  rdfs:label  "Jugoslavia"@no .
+
+nationality:suhh a duo:Nationality ;
+  rdfs:label  "Sovjetunionen"@no .
+
+nationality:ddde a duo:Nationality ;
+  rdfs:label  "Øst-Tyskland (DDR)"@no .
+language:nob  a lvont:Language ;
+  rdfs:label  "Norsk (bokmål)"@no .
+
+language:nno  a lvont:Language ;
+  rdfs:label  "Norsk (nynorsk)"@no .
+
+language:dan  a lvont:Language ;
+  rdfs:label  "Dansk"@no .
+
+language:eng  a lvont:Language ;
+  rdfs:label  "Engelsk"@no .
+
+language:swe  a lvont:Language ;
+  rdfs:label  "Svensk"@no .
+
+language:afr  a lvont:Language ;
+  rdfs:label  "Afrikaans"@no .
+
+language:sia  a lvont:Language ;
+  rdfs:label  "Akkalasamisk"@no .
+
+language:alb  a lvont:Language ;
+  rdfs:label  "Albansk"@no .
+
+language:amh  a lvont:Language ;
+  rdfs:label  "Amharisk"@no .
+
+language:ara  a lvont:Language ;
+  rdfs:label  "Arabisk"@no .
+
+language:arm  a lvont:Language ;
+  rdfs:label  "Armensk"@no .
+
+language:aze  a lvont:Language ;
+  rdfs:label  "Aserbajdsjansk"@no .
+
+language:bam  a lvont:Language ;
+  rdfs:label  "Bambara"@no .
+
+language:baq  a lvont:Language ;
+  rdfs:label  "Baskisk"@no .
+
+language:ben  a lvont:Language ;
+  rdfs:label  "Bengali"@no .
+
+language:bos  a lvont:Language ;
+  rdfs:label  "Bosnisk"@no .
+
+language:bul  a lvont:Language ;
+  rdfs:label  "Bulgarsk"@no .
+
+language:bur  a lvont:Language ;
+  rdfs:label  "Burmansk"@no .
+
+language:ceb  a lvont:Language ;
+  rdfs:label  "Cebuano"@no .
+
+language:prs  a lvont:Language ;
+  rdfs:label  "Dari"@no .
+
+language:din  a lvont:Language ;
+  rdfs:label  "Dinka"@no .
+
+language:dua  a lvont:Language ;
+  rdfs:label  "Duala"@no .
+
+language:dyu  a lvont:Language ;
+  rdfs:label  "Dyula"@no .
+
+language:egy  a lvont:Language ;
+  rdfs:label  "Egyptisk"@no .
+
+language:epo  a lvont:Language ;
+  rdfs:label  "Esperanto"@no .
+
+language:est  a lvont:Language ;
+  rdfs:label  "Estisk"@no .
+
+language:per  a lvont:Language ;
+  rdfs:label  "Farsi"@no .
+
+language:fin  a lvont:Language ;
+  rdfs:label  "Finsk"@no .
+
+language:fre  a lvont:Language ;
+  rdfs:label  "Fransk"@no .
+
+language:fao  a lvont:Language ;
+  rdfs:label  "Færøysk"@no .
+
+language:glg  a lvont:Language ;
+  rdfs:label  "Galisisk"@no .
+
+language:grc  a lvont:Language ;
+  rdfs:label  "Gammelgresk"@no .
+
+language:syc  a lvont:Language ;
+  rdfs:label  "Gammelsyrisk"@no .
+
+language:geo  a lvont:Language ;
+  rdfs:label  "Georgisk"@no .
+
+language:gre  a lvont:Language ;
+  rdfs:label  "Gresk"@no .
+
+language:kal  a lvont:Language ;
+  rdfs:label  "Grønlandsk"@no .
+
+language:guj  a lvont:Language ;
+  rdfs:label  "Gujarati"@no .
+
+language:hau  a lvont:Language ;
+  rdfs:label  "Hausa"@no .
+
+language:heb  a lvont:Language ;
+  rdfs:label  "Hebraisk"@no .
+
+language:hil  a lvont:Language ;
+  rdfs:label  "Hiligaynon"@no .
+
+language:hin  a lvont:Language ;
+  rdfs:label  "Hindi"@no .
+
+language:bel  a lvont:Language ;
+  rdfs:label  "Hviterussisk"@no .
+
+language:ibo  a lvont:Language ;
+  rdfs:label  "Ibo"@no .
+
+language:ilo  a lvont:Language ;
+  rdfs:label  "Iloko"@no .
+
+language:smn  a lvont:Language ;
+  rdfs:label  "Inarisamisk"@no .
+
+language:ind  a lvont:Language ;
+  rdfs:label  "Indonesisk"@no .
+
+language:iku  a lvont:Language ;
+  rdfs:label  "Inuittisk"@no .
+
+language:gle  a lvont:Language ;
+  rdfs:label  "Irsk"@no .
+
+language:ice  a lvont:Language ;
+  rdfs:label  "Islandsk"@no .
+
+language:ita  a lvont:Language ;
+  rdfs:label  "Italiensk"@no .
+
+language:jpn  a lvont:Language ;
+  rdfs:label  "Japansk"@no .
+
+language:yid  a lvont:Language ;
+  rdfs:label  "Jiddisch"@no .
+
+language:yor  a lvont:Language ;
+  rdfs:label  "Joruba"@no .
+
+language:kan  a lvont:Language ;
+  rdfs:label  "Kannada"@no .
+
+language:cat  a lvont:Language ;
+  rdfs:label  "Katalansk"@no .
+
+language:sjk  a lvont:Language ;
+  rdfs:label  "Kemisamisk"@no .
+
+language:cam  a lvont:Language ;
+  rdfs:label  "Khmer"@no .
+
+language:sjd  a lvont:Language ;
+  rdfs:label  "Kildinsamisk"@no .
+
+language:chi  a lvont:Language ;
+  rdfs:label  "Kinesisk"@no .
+
+language:kor  a lvont:Language ;
+  rdfs:label  "Koreansk"@no .
+
+language:hrv  a lvont:Language ;
+  rdfs:label  "Kroatisk"@no .
+
+language:kur  a lvont:Language ;
+  rdfs:label  "Kurdisk"@no .
+
+language:kmr  a lvont:Language ;
+  rdfs:label  "Kurdisk (kurmandji)"@no .
+
+language:ckb  a lvont:Language ;
+  rdfs:label  "Kurdisk (sorani)"@no .
+
+language:fkv  a lvont:Language ;
+  rdfs:label  "Kvensk"@no .
+
+language:lao  a lvont:Language ;
+  rdfs:label  "Laotisk"@no .
+
+language:lat  a lvont:Language ;
+  rdfs:label  "Latin"@no .
+
+language:lav  a lvont:Language ;
+  rdfs:label  "Latvisk"@no .
+
+language:lin  a lvont:Language ;
+  rdfs:label  "Lingala"@no .
+
+language:lit  a lvont:Language ;
+  rdfs:label  "Litauisk"@no .
+
+language:smj  a lvont:Language ;
+  rdfs:label  "Lulesamisk"@no .
+
+language:luo  a lvont:Language ;
+  rdfs:label  "Luo"@no .
+
+language:mac  a lvont:Language ;
+  rdfs:label  "Makedonsk"@no .
+
+language:mlg  a lvont:Language ;
+  rdfs:label  "Madagassisk"@no .
+
+language:mal  a lvont:Language ;
+  rdfs:label  "Malayalam"@no .
+
+language:may  a lvont:Language ;
+  rdfs:label  "Malayisk"@no .
+
+language:mnk  a lvont:Language ;
+  rdfs:label  "Mandinka"@no .
+
+language:mri  a lvont:Language ;
+  rdfs:label  "Maori"@no .
+
+language:mar  a lvont:Language ;
+  rdfs:label  "Marathi"@no .
+
+language:myn  a lvont:Language ;
+  rdfs:label  "Maya"@no .
+
+language:mon  a lvont:Language ;
+  rdfs:label  "Mongolsk"@no .
+
+language:mos  a lvont:Language ;
+  rdfs:label  "Mossisk"@no .
+
+language:dut  a lvont:Language ;
+  rdfs:label  "Nederlandsk"@no .
+
+language:nep  a lvont:Language ;
+  rdfs:label  "Nepali"@no .
+
+language:nic  a lvont:Language ;
+  rdfs:label  "Niger-Kongospråk"@no .
+
+language:sme  a lvont:Language ;
+  rdfs:label  "Nordsamisk"@no .
+
+language:nso  a lvont:Language ;
+  rdfs:label  "Nordsotho"@no .
+
+language:non  a lvont:Language ;
+  rdfs:label  "Norrønt"@no .
+
+language:nor  a lvont:Language ;
+  rdfs:label  "Norsk"@no .
+
+language:nya  a lvont:Language ;
+  rdfs:label  "Nyanja"@no .
+
+language:orm  a lvont:Language ;
+  rdfs:label  "Oromo"@no .
+
+language:pam  a lvont:Language ;
+  rdfs:label  "Pampanga"@no .
+
+language:pan  a lvont:Language ;
+  rdfs:label  "Panjabi"@no .
+
+language:pus  a lvont:Language ;
+  rdfs:label  "Pashto"@no .
+
+language:sje  a lvont:Language ;
+  rdfs:label  "Pitesamisk"@no .
+
+language:pol  a lvont:Language ;
+  rdfs:label  "Polsk"@no .
+
+language:por  a lvont:Language ;
+  rdfs:label  "Portugisisk"@no .
+
+language:que  a lvont:Language ;
+  rdfs:label  "Quechua"@no .
+
+language:roh  a lvont:Language ;
+  rdfs:label  "Retoromansk"@no .
+
+language:rom  a lvont:Language ;
+  rdfs:label  "Romani"@no .
+
+language:rum  a lvont:Language ;
+  rdfs:label  "Rumensk"@no .
+
+language:rus  a lvont:Language ;
+  rdfs:label  "Russisk"@no .
+
+language:smi  a lvont:Language ;
+  rdfs:label  "Samisk"@no .
+
+language:san  a lvont:Language ;
+  rdfs:label  "Sanskrit"@no .
+
+language:srp  a lvont:Language ;
+  rdfs:label  "Serbisk"@no .
+
+language:sna  a lvont:Language ;
+  rdfs:label  "Shona"@no .
+
+language:sin  a lvont:Language ;
+  rdfs:label  "Singalesisk"@no .
+
+language:sms  a lvont:Language ;
+  rdfs:label  "Skoltesamisk"@no .
+
+language:sco  a lvont:Language ;
+  rdfs:label  "Skotsk"@no .
+
+language:gla  a lvont:Language ;
+  rdfs:label  "Skotsk-gælisk"@no .
+
+language:slo  a lvont:Language ;
+  rdfs:label  "Slovakisk"@no .
+
+language:slv  a lvont:Language ;
+  rdfs:label  "Slovensk"@no .
+
+language:som  a lvont:Language ;
+  rdfs:label  "Somali"@no .
+
+language:sot  a lvont:Language ;
+  rdfs:label  "Sotho"@no .
+
+language:spa  a lvont:Language ;
+  rdfs:label  "Spansk"@no .
+
+language:swa  a lvont:Language ;
+  rdfs:label  "Swahili"@no .
+
+language:sma  a lvont:Language ;
+  rdfs:label  "Sørsamisk"@no .
+
+language:tgl  a lvont:Language ;
+  rdfs:label  "Tagalog"@no .
+
+language:tgk  a lvont:Language ;
+  rdfs:label  "Tadsjikisk"@no .
+
+language:tam  a lvont:Language ;
+  rdfs:label  "Tamil"@no .
+
+language:sgn  a lvont:Language ;
+  rdfs:label  "Tegnspråk"@no .
+
+language:tel  a lvont:Language ;
+  rdfs:label  "Telugu"@no .
+
+language:sjt  a lvont:Language ;
+  rdfs:label  "Tersamisk"@no .
+
+language:tet  a lvont:Language ;
+  rdfs:label  "Tetum"@no .
+
+language:tha  a lvont:Language ;
+  rdfs:label  "Thai"@no .
+
+language:tib  a lvont:Language ;
+  rdfs:label  "Tibetansk"@no .
+
+language:tig  a lvont:Language ;
+  rdfs:label  "Tigré"@no .
+
+language:tir  a lvont:Language ;
+  rdfs:label  "Tigrinja"@no .
+
+language:cze  a lvont:Language ;
+  rdfs:label  "Tsjekkisk"@no .
+
+language:che  a lvont:Language ;
+  rdfs:label  "Tsjetsjensk"@no .
+
+language:tso  a lvont:Language ;
+  rdfs:label  "Tsonga"@no .
+
+language:tuk  a lvont:Language ;
+  rdfs:label  "Turkmensk"@no .
+
+language:twi  a lvont:Language ;
+  rdfs:label  "Twi"@no .
+
+language:tur  a lvont:Language ;
+  rdfs:label  "Tyrkisk"@no .
+
+language:ger  a lvont:Language ;
+  rdfs:label  "Tysk"@no .
+
+language:ukr  a lvont:Language ;
+  rdfs:label  "Ukrainsk"@no .
+
+language:sju  a lvont:Language ;
+  rdfs:label  "Umesamisk"@no .
+
+language:hun  a lvont:Language ;
+  rdfs:label  "Ungarsk"@no .
+
+language:urd  a lvont:Language ;
+  rdfs:label  "Urdu"@no .
+
+language:uzb  a lvont:Language ;
+  rdfs:label  "Usbekisk"@no .
+
+language:vie  a lvont:Language ;
+  rdfs:label  "Vietnamesisk"@no .
+
+language:vol  a lvont:Language ;
+  rdfs:label  "Volapyk"@no .
+
+language:wel  a lvont:Language ;
+  rdfs:label  "Walisisk"@no .
+
+language:wol  a lvont:Language ;
+  rdfs:label  "Wolof"@no .
+
+language:xho  a lvont:Language ;
+  rdfs:label  "Xhosa"@no .
+
+language:zza  a lvont:Language ;
+  rdfs:label  "Zazaki"@no .
+
+language:zul  a lvont:Language ;
+  rdfs:label  "Zulu"@no .
+
+language:pli  a lvont:Language ;
+  rdfs:label  "Pali"@no .
+
+language:sux  a lvont:Language ;
+  rdfs:label  "Sumerisk"@no .
+
+language:kik  a lvont:Language ;
+  rdfs:label  "Kikuyu"@no .
+
+language:ful  a lvont:Language ;
+  rdfs:label  "Fulani"@no .
+
+language:akk  a lvont:Language ;
+  rdfs:label  "Akkadisk"@no .
+
+language:gez  a lvont:Language ;
+  rdfs:label  "Ge'ez"@no .
+
+language:arc  a lvont:Language ;
+  rdfs:label  "Arameisk"@no .
+
+language:ing  a lvont:Language ;
+  rdfs:label  "Ingen"@no .
