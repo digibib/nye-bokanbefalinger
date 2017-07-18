@@ -29,6 +29,16 @@ services:
     environment:
       SECRET_SESSION_KEY: secret
 
+  users:
+    container_name: users
+    image: digibib/bokanbefalinger-brukerstyring:d47b6472e2623d05eab80120fb1b461799b6099b
+    networks:
+      - bokanbefalinger
+    environment:
+      GMAIL_ADR: sercet
+      GMAIL_PASS: secret
+      SECRET_SESSION_KEY: secret
+
   redis:
     container_name: redis
     image: "redis:3.0.7-alpine"
