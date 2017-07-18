@@ -1,4 +1,4 @@
-.PHONY: clear_graphs copy_data import update
+.PHONY: clear_graphs copy_data import update strip_isbn
 
 define clear_graph
 	docker exec -i virtuoso bash -c "cd /data && echo -e \"log_enable(3,1);\nSPARQL DROP SILENT GRAPH <$(1)>;\ncheckpoint;\" | isql"
@@ -30,3 +30,8 @@ update:
 	$(call clear_graph,lsext)
 	$(call import_graph,ds.nt.gz,lsext)
 	$(call import_graph,resources.ttl,lsext)
+	make strip_isbn
+
+strip_isbn:
+	docker cp data/strip_isbn.sql virtuoso:/data/
+	docker exec -i virtuoso bash -c "cd /data && isql 1111 dba dba strip_isbn.sql"
