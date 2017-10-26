@@ -23,7 +23,7 @@ services:
 
   api:
     container_name: api
-    image: digibib/bokanbefalinger-api:eda8240edc9943006c69041e54d4622c5536ce05
+    image: digibib/bokanbefalinger-api:3d782f1e53c829121e7b11070a1e344676b2850a
     networks:
       - bokanbefalinger
     environment:
